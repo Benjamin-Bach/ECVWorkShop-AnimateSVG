@@ -1,0 +1,105 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main>
+    <svg viewBox="-10 -10 520 520">
+
+      <path
+        id="path-1"
+        d="M 0, 0
+        L 500, 0
+        L 500, 500
+        L 0, 500
+        Z"
+        stroke="greenyellow"
+      />
+
+      <rect x="0" y="260" width="0" height="1" fill="greenyellow"/>
+      <g data-name="step-1">
+        <animate id="step1d"
+        xlink:href="#path-1"
+        attributeName="d"
+        dur="0.5s"
+        to="M 0, 0
+        L 300, 200
+        L 500, 500
+        L 0, 500
+        Z"
+        fill="freeze"
+        begin="indefinite"
+        />
+        <animate fill="freeze" begin="step1d.begin + 1s" xlink:href="#path-1" dur="0.5s" attributeName="stroke" to="blue" />
+      </g>
+      <g data-name="step-2">
+
+        <animate
+        id="anim2"
+        xlink:href="#path-1"
+        attributeName="d"
+        dur="0.5s"
+        to="M 0, 0
+        L 300, 200
+        L 300, 300
+        L 0, 500
+        Z"
+        fill="freeze"
+        begin="indefinite"
+        />
+        <animate fill="freeze" begin="indefinite" xlink:href="#path-1" dur="0.5s" attributeName="stroke" to="red" />
+      </g>
+      <g data-name="step-3">
+        <animate
+        xlink:href="#path-1"
+        attributeName="d"
+        dur="0.5s"
+        to="M 0, 0
+        L 300, 200
+        L 300, 300
+        L 200, 300
+        Z"
+        fill="freeze"
+        begin="indefinite"
+        />
+      </g>
+      <g data-name="step-4">
+        <animate
+        xlink:href="#path-1"
+        attributeName="d"
+        dur="0.5s"
+        to="M 50, 50
+        L 450, 50
+        L 450, 450
+        L 50, 450
+        Z"
+        fill="freeze"
+        begin="indefinite"
+        />
+      </g>
+      <g data-name="step-5">
+        <animate
+        xlink:href="#path-1"
+        attributeName="d"
+        dur="0.5s"
+        to="M 0, 0
+        L 500, 0
+        L 260, 260
+        L 260, 260
+        Z"
+        fill="freeze"
+        begin="indefinite"
+        />
+      </g>
+    </svg>
+  </main>
+
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
