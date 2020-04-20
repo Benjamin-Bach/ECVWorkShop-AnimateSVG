@@ -3,6 +3,7 @@ This project is dedicated to serve as background during the ecv workshop (2020).
 It tends to facilitate the use of SVG animations, native or through CSS.
 
 ## How to use
+Work with start.html, play with samples html files.
 ### SVG part
 Declare an element svg in html file.
 Create a first path, rect, polygon or any shape and asign it an id.
