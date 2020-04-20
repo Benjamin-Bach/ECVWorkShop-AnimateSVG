@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="exemple-1.css">
+</head>
+<body>
+
+  <main>
+
+    <svg viewBox="0 0 500 500">
+        <rect id="rect1" x="0" y="0" width="100" height="200" fill="red" />
+        <rect x="50" y="100" width="100" height="200" fill="blue" />
+        <circle r="150" cy="250" cx="250" fill="green"/>
+        <path id="chemin" d="M 0, 0 L 0, 0 L 200, 300 L 100, 300 Z" stroke="purple" fill="transparent"/>
+
+        <animate
+          xlink:href="#rect1"
+          attributeName="width"
+          to="200"
+          dur="3s"
+          begin="click"
+          fill="freeze"
+        />
+        <animate
+          id="animation2"
+          xlink:href="#rect1"
+          attributeName="height"
+          to="400"
+          dur="3s"
+          begin="click"
+          fill="freeze"
+        />
+        <animate
+          xlink:href="#chemin"
+          attributeName="d"
+          to="M 0, 0 L 200, 0 L 300, 450 L 100, 450 Z"
+          dur="1s"
+          begin="animation2.end - 1s"
+          fill="freeze"
+        />
+
+    </svg>
+
+
+  </main>
+
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 main{
   display: flex;
   justify-content: center;
@@ -25,12 +26,16 @@ svg{
   width: 100%;
   max-width: 520px;
 }
+
 path{
   fill: transparent;
   stroke-width: 1;
   stroke-linejoin: round;
 }
-
+body{
+  transition: all .3s;
+  background-color: grey;
+}
 body rect{
   transition: all .5s;
 }
@@ -39,6 +44,9 @@ body.step-1 rect{
 }
 body.step-2 rect{
   width: 40%;
+}
+body.step-2{
+  background-color: bisque;
 }
 body.step-3 rect{
   width: 60%;
