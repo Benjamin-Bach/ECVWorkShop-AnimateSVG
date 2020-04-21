@@ -12,6 +12,7 @@ Create a first path, rect, polygon or any shape and asign it an id.
 ```
 Then, after this shape, create a g (group) element and asign it a data-name attribute.
 Inside this group, declare your first animation an set the begin attribute to indefinite.
+(You can use animateMotion too, see the sample-2.html)
 ```html
 <rect id="myRect1" x="0" y="0" width="100" height="200" fill="red" />
 
