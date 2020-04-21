@@ -15,18 +15,18 @@ svgAnimSteps.forEach((item, i) => {
         e.preventDefault()
         let animSelector = 'svg g[data-name="' + stepName + '"] animate[begin="indefinite"]'
             animSelector += ', svg g[data-name="' + stepName + '"] animateMotion[begin="indefinite"]'
+        if(body.classList.length){
+          body.classList.remove(body.classList[0])
+        }
+        body.classList.add(stepName)
+        navUl.querySelectorAll('a').forEach((item, i) => {
+          item.classList.remove('active')
+        });
+        e.target.classList.add('active')
         document.querySelectorAll(animSelector).forEach((anim, j) => {
           anim.beginElement()
           anim.addEventListener('beginEvent', animationBegin(e, stepName, anim))
           anim.addEventListener('endEvent', animationEnd(e, stepName, anim))
-          if(body.classList.length){
-            body.classList.remove(body.classList[0])
-          }
-          body.classList.add(stepName)
-          navUl.querySelectorAll('a').forEach((item, i) => {
-            item.classList.remove('active')
-          });
-          e.target.classList.add('active')
         })
       })
   li.appendChild(a)

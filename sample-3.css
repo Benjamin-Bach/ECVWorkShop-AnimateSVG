@@ -29,14 +29,14 @@ svg{
 
 
 path{
+  transition: all 3s;
   stroke-dasharray: 240;
   stroke-dashoffset: 240;
-  animation: monAnim 5s forwards;
+}
+.step-1 path{
+  stroke-dashoffset: 0;
 }
 
-@keyframes monAnim {
-  to{
-    stroke-dashoffset: 0;
-  }
-}
+
+
 
