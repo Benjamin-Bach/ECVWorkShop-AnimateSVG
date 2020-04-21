@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="start.css">
+</head>
+<body>
+
+  <main>
+
+    <svg viewBox="-10 -10 510 510">
+
+      <rect x="0" y="0" width="0" height="20" fill="greenyellow" id="myRect1" />
+      <rect x="0" y="25" width="0" height="20" fill="greenyellow" id="myRect2" />
+
+      <g data-name="test">
+        <animate
+        xlink:href="#myRect1"
+        attributeName="width"
+        dur="5s"
+        to="500"
+        fill="freeze"
+        begin="indefinite"
+        />
+        <animate
+        xlink:href="#myRect2"
+        attributeName="width"
+        dur="1s"
+        keyTimes="0; 0.5; 0.75; 1"
+        values="0; 400; 200; 500"
+        fill="freeze"
+        begin="indefinite"
+        />
+      </g>
+
+
+    </svg>
+
+
+
+
+  </main>
+
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
