@@ -14,6 +14,7 @@ svgAnimSteps.forEach((item, i) => {
       a.addEventListener('click', (e) => {
         e.preventDefault()
         let animSelector = 'svg g[data-name="' + stepName + '"] animate[begin="indefinite"]'
+            animSelector += ', svg g[data-name="' + stepName + '"] animateMotion[begin="indefinite"]'
         document.querySelectorAll(animSelector).forEach((anim, j) => {
           anim.beginElement()
           anim.addEventListener('beginEvent', animationBegin(e, stepName, anim))
@@ -34,5 +35,7 @@ svgAnimSteps.forEach((item, i) => {
 navUl.appendChild(buttons)
 
 /* Callback to cutomize */
-function animationBegin(e, stepName, anim){}
+function animationBegin(e, stepName, anim){
+  console.log(anim)
+}
 function animationEnd(e, stepName, anim){}
