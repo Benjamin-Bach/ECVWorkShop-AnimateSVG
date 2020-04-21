@@ -1,0 +1,42 @@
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.step-nav{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+.step-nav li a{
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+.step-nav li a.active{
+  text-decoration: underline;
+}
+svg{
+  width: 100%;
+  max-width: 500px;
+}
+
+
+path{
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: monAnim 5s forwards;
+}
+
+@keyframes monAnim {
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
