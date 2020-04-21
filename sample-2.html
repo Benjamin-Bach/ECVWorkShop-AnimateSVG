@@ -18,7 +18,7 @@
       <circle id="myCircle" r="5" cx="20" cy="50" fill="red" />
 
       <g data-name="step-1">
-        <animateMotion id="myCircleMotion" xlink:href="#myCircle" dur="4s" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+        <animateMotion begin="indefinite" id="myCircleMotion" xlink:href="#myCircle" dur="4s" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
         <set xlink:href="#myCircle" attributeName="cx" to="0" begin="myCircleMotion.begin" dur="4s" />
         <set xlink:href="#myCircle" attributeName="cy" to="0" begin="myCircleMotion.begin" dur="4s" />
       </g>
