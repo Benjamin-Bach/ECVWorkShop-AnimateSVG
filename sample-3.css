@@ -29,6 +29,7 @@ svg{
 
 
 path{
+  filter: url(#displacementFilter);
   transition: all 3s;
   stroke-dasharray: 240;
   stroke-dashoffset: 240;
