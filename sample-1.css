@@ -28,8 +28,10 @@ svg{
 }
 
 path{
-  fill: transparent;
-  stroke-width: 1;
+  // filter: url(#displacementFilter);
+
+  fill: white;
+  stroke-width: 3;
   stroke-linejoin: round;
 }
 body{
@@ -38,6 +40,7 @@ body{
 }
 body rect{
   transition: all .5s;
+  filter: url(#displacementFilter);
 }
 body.step-1 rect{
   width: 20%;
